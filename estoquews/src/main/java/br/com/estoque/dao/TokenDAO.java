@@ -10,11 +10,11 @@ import br.com.estoque.modelo.TokenUsuario;
 import br.com.estoque.modelo.Usuario;
 
 
-public class TokenDao {
+public class TokenDAO {
 
 	private static Map<TokenUsuario, Usuario> USUARIOS = new LinkedHashMap<>();
 
-	public TokenDao() {
+	public TokenDAO() {
 		popularUsuariosNoMapa();
 	}
 	

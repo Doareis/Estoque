@@ -1,4 +1,4 @@
-package br.com.estoque.validation;
+package br.com.estoque.exception;
 
 import java.util.List;
 

@@ -10,11 +10,11 @@ import br.com.estoque.modelo.Filtro;
 import br.com.estoque.modelo.Item;
 
 
-public class ItemDao {
+public class ItemDAO {
 
 	private static Map<String, Item> ITENS = new LinkedHashMap<>();
 
-	public ItemDao() {
+	public ItemDAO() {
 		popularItensNoMapa();
 	}
 	
@@ -35,7 +35,7 @@ public class ItemDao {
 		for(Filtro filtro : filtros) {
 			for (Item item : todosItens) {
 				
-				String tipo = filtro.getTipo().getNome();
+				String tipo = (filtro.getTipo() == null) ? "" : filtro.getTipo().getNome();
 				String nome = filtro.getNome();
 				
 				if(itemPossuiTipo(item, tipo) && itemPossuiNome(item, nome)){
@@ -52,10 +52,14 @@ public class ItemDao {
 	}
 	
 	private boolean itemPossuiNome(Item item, String nome) {
+		if(item == null || nome == null)
+			return true;
 		return item.getNome().contains(nome);
 	}
 
 	private boolean itemPossuiTipo(Item item, String tipo) {
+		if(item == null || tipo == null)
+			return true;
 		return item.getTipo().equals(tipo);
 	}
 	

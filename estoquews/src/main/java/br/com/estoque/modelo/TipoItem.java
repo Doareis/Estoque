@@ -23,7 +23,6 @@ public enum TipoItem {
 
 	public static boolean existe(String valor) {
 		try{
-			//joga IllegalArgumentException caso nao exista
 			TipoItem.valueOf(valor.toUpperCase());
 		}catch(IllegalArgumentException e) {
 			return false;

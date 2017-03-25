@@ -4,7 +4,6 @@ package br.com.estoque.modelo;
 public class Filtro {
 
 	private TipoItem tipo;
-
 	private String nome;
 
 	public TipoItem getTipo() {

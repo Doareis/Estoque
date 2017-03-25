@@ -9,20 +9,20 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ListaItens {
+public class ListaFiltros {
 
-	@XmlElement(name="item")
-	private List<Item> itens;
+	@XmlElement(name="filtro")
+	private List<Filtro> filtros;
 
-	// precisa declarar construtor padrao para que o JAX-B funcione
-	public ListaItens() {}
-	
-	public ListaItens(List<Item> itens) {
-		this.itens = itens;
+	public ListaFiltros(List<Filtro> filtros) {
+		this.filtros = filtros;
 	}
 
-	public List<Item> getItens() {
-		return itens;
+	ListaFiltros() {
+	}
+	
+	public List<Filtro> getLista() {
+		return filtros;
 	}
 	
 }

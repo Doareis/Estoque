@@ -3,6 +3,7 @@ package br.com.estoque.validation;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.estoque.exception.ItemValidadorException;
 import br.com.estoque.modelo.Item;
 import br.com.estoque.modelo.TipoItem;
 
